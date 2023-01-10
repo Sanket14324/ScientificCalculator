@@ -1,35 +1,32 @@
 // let string = "";
 var input = document.getElementById("screen");
-document.getElementById("myGrid").addEventListener("keypress", function(event){
 
-    if(event.key === "Enter") {
-        console.log("enter the key in grid");
-        document.getElementById("Enter").click();
-    }
-})
+// event for Enter key
 input.addEventListener("keypress", function(event) {
     console.log("input1",event.target.value);
     if (event.key === "Enter") {
-        console.log("enter the key");
         event.preventDefault();
         document.getElementById("Enter").click();
     }
 });
 
+
+// function to clear screen
 function AC()
 {
-    console.log("ssss");
     string = "";
     document.querySelector('input').value = string ;
 }
 
+// function for result
 function result()
 {   
+    string = "";
     string = input.value;
-    console.log(string,"string in result");
     input.value = eval(string);
 }
 
+// function for backspace
 function back()
 {
     string = input.value;
@@ -37,17 +34,17 @@ function back()
     input.value = string;
 }
 
+// function for click on button
 function clickEvent(n)
 {
     string = input.value;
     string = string + n;
-    console.log("string",string)
     input.value = string;
 
 }
 
+// sine value of number
 function sin(){
-    console.log("I am running");
     string = "";
     string += input.value;
     if(string != ""){
@@ -57,8 +54,9 @@ function sin(){
     string = Math.sin(Number(string));
     input.value = string;
 }
+
+// cosine value of number
 function cos(){
-    console.log("I am running");
     string = "";
     string += input.value;
     if(string != ""){
@@ -68,8 +66,9 @@ function cos(){
     string = Math.cos(Number(string));
     input.value = string;
 }
+
+// tan value of number
 function tan(){
-    console.log("I am running");
     string = "";
     string += input.value;
     if(string != ""){
@@ -80,28 +79,35 @@ function tan(){
     input.value = string;
 }
 
+// function to square the number
 function square(){
     string = "";
     string = input.value;
     string = string * string;
-    console.log(string);
     input.value = string;
 }
 
+// squareroot of number
 function sqrt(){
     string = "";
     string = input.value;
     string = Math.sqrt(Number(string));
-    console.log(string);
     input.value = string;
 }
+
+// function to give the value of pi
 function pi(){
     string = "";
     string  +=  input.value;
-    var temp = string.substring(string.length-1, string.length) ;
-    console.log(temp);
-    if((temp >= 0 && temp <= 9) || temp == '.' ){
-        alert("Invalid format, either put operator or blank");
+    if(string){
+        var temp = string.substring(string.length-1, string.length) ;
+        if(((temp >= 0 && temp <= 9) || temp == '.' ) ){
+            alert("Invalid format, either put operator or blank");
+        }
+        else {
+            string += Math.E;
+            input.value = string;
+        }
     }
     else {
         string += Math.PI;
@@ -109,10 +115,33 @@ function pi(){
     }
 }
 
-function log(){
+//function to calculate the log of number with abse 10
+function log()
+{
     string = "";
     string = input.value;
     string = Math.log10(Number(string));
-    console.log(string);
     input.value = string;
+}
+
+// function to give the constant number E
+function e()
+{
+    string = "";
+    string  +=  input.value;
+    if(string){
+        var temp = string.substring(string.length-1, string.length) ;
+        if(((temp >= 0 && temp <= 9) || temp == '.' ) ){
+            alert("Invalid format, either put operator or blank");
+        }
+        else {
+            string += Math.E;
+            input.value = string;
+        }
+    }
+    else {
+        string += Math.E;
+        input.value = string;
+    }
+    
 }

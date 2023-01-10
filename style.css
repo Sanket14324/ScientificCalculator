@@ -19,7 +19,6 @@ body {
 
 .grid-container
 {
-    height:58vh;
     background-color: grey;
     padding: 10px;
     grid-gap : 10px ;
