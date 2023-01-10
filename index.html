@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="grid-container" id="myGrid">
+            <input id="screen" class="display" type="text" placeholder="0" name="answer">
+            <button class="btn" onclick="AC()">AC</button>
+            <button class="btn" onclick="clickEvent('(')" >(</button>
+            <button class="btn" onclick="clickEvent(')')">)</button>
+            <button class="btn" onclick="clickEvent('-')">-</button>  
+            <button class="btn" onclick="clickEvent(9)">9</button>
+            <button class="btn" onclick="clickEvent(8)">8</button>
+            <button class="btn" onclick="clickEvent(7)">7</button>  
+            <button class="btn" onclick="clickEvent('/')" >/</button> 
+            <button class="btn" onclick="clickEvent(6)">6</button>
+            <button class="btn" onclick="clickEvent(5)">5</button>
+            <button class="btn" onclick="clickEvent(4)">4</button> 
+            <button class="btn" onclick="clickEvent('*')">*</button> 
+            <button class="btn" onclick="clickEvent(3)">3</button>
+            <button class="btn" onclick="clickEvent(2)">2</button> 
+            <button class="btn" onClick="clickEvent(1)">1</button>
+            <button class="plus btn" onclick="clickEvent('+')">+</button> 
+            <button class="btn zero" onclick="clickEvent(0)">0</button>
+            <button class="btn" onclick="clickEvent('.')">.</button>
+            <button class="btn" onclick="pi()">pi</button>
+            <button class="btn" onclick="e()">e</button>
+            <button class="btn" onclick="square()">x<Sup>2</Sup></button>
+            <button class="btn" onclick="sqrt()">sqrt</button>
+            <button class="btn" onclick="log()">log</button>
+            <button class="btn" onclick="sin()">sin</button>
+            <button class="btn" onclick="cos()">cos</button>
+            <button class="btn" onclick="tan()">tan</button>
+            <button class="btn" onclick="back()">Backspace</button>
+            <button class="btn" id="Enter" onclick="result()">Enter</button>
+            
+        </div>
+    </div>
+    <script src="javascript.js">    
+    </script>
+</body>
+</html>
